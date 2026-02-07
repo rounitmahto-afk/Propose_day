@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Will You Be Mine Forever? 💍❤️</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: linear-gradient(-45deg, #ff6b9d, #ffa8d1, #d946ef, #c084fc);
+      background-size: 400% 400%;
+      animation: gradient 18s ease infinite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      position: relative;
+      min-height: 100vh;
+    }
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 5;
+    }
+    .heart {
+      position: absolute;
+      bottom: -80px;
+      font-size: 2.5rem;
+      animation: floatHeart 9s linear infinite;
+      opacity: 0;
+    }
+    @keyframes floatHeart {
+      0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+      5%   { opacity: 1; }
+      100% { transform: translateY(-140vh) rotate(1800deg); opacity: 0; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 15px 100px;
+    }
+
+    h1 {
+      font-size: clamp(3.8rem, 11vw, 8rem);
+      margin: 20px 0 15px;
+      text-shadow: 0 0 35px #ff3366, 0 0 70px #ff3366;
+      animation: pulse 3.5s infinite alternate;
+    }
+    @keyframes pulse { from { transform: scale(1); } to { transform: scale(1.05); } }
+
+    .typing {
+      font-size: clamp(1.7rem, 5.5vw, 3rem);
+      margin: 25px 0 45px;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+      color: #fffef0;
+      text-shadow: 0 0 18px rgba(255,255,255,0.8);
+      max-width: 92%;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: clamp(18px, 5vw, 35px);
+      max-width: 100%;
+      margin: 25px 0;
+      padding: 0 12px;
+    }
+
+    .photo {
+      width: clamp(170px, 44vw, 270px);
+      height: clamp(170px, 44vw, 270px);
+      border-radius: 50%;
+      overflow: hidden;
+      border: 8px solid rgba(255,255,255,0.6);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      transition: all 0.5s ease;
+      transform: scale(0.93);
+    }
+
+    .photo:hover {
+      transform: scale(1.15) rotate(5deg);
+      border-color: #ff3366;
+      box-shadow: 0 18px 60px rgba(255,51,102,0.6);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .proposal {
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      margin: 40px 0 30px;
+      line-height: 1.5;
+      animation: glow 5s infinite alternate;
+      max-width: 90%;
+      font-weight: bold;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 20px #fff, 0 0 40px #ff69b4; }
+      to   { text-shadow: 0 0 45px #fff, 0 0 90px #ff69b4, 0 0 130px #ff1493; }
+    }
+
+    .yes-btn {
+      margin-top: 35px;
+      padding: 18px 60px;
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(45deg, #ff3366, #ff6699);
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(255,51,102,0.6);
+      cursor: pointer;
+      transition: all 0.4s;
+    }
+
+    .yes-btn:hover {
+      transform: scale(1.15);
+      box-shadow: 0 15px 45px rgba(255,51,102,0.9);
+    }
+
+    footer {
+      margin-top: 70px;
+      font-size: 1.9rem;
+      font-weight: bold;
+      opacity: 0.97;
+      text-shadow: 0 0 12px rgba(255,255,255,0.9);
+    }
+  </style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+  <h1>Propose Day Special 💕✨</h1>
+  
+  <div class="typing" id="typingText"></div>
+  
+  <div class="photos">
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-07 at 11.40.05 PM.jpeg" alt="Memory 1"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-07 at 11.40.06 PM.jpeg" alt="Memory 2"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-07 at 11.40.06 PM (1).jpeg" alt="Memory 3"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-07 at 11.40.07 PM.jpeg" alt="Memory 4"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-07 at 11.40.07 PM (1).jpeg" alt="Memory 5"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-07 at 11.40.07 PM (2).jpeg" alt="Memory 6"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-07 at 11.40.08 PM.jpeg" alt="Memory 6"></div>
+  </div>
+
+  <div class="proposal">
+    Meri pyari Maki..... ❤️<br><br>
+    Har din tere saath bitana chahta hoon,<br>
+    har khushi tere saath baantna chahta hoon,<br>
+    har sapna tere saath poora karna chahta hoon…<br><br>
+    <span style="color:#ffeb3b; font-size:1.1em;">Kya tu mujhe apna forever banayegi?</span><br><br>
+    Will You Be Mine forever....? 💍🥹
+  </div>
+
+  <button class="yes-btn" onclick="alert('Aaj se tu sirf meri hai! 😍💖 I love you forever ❤️')">YES! 💖</button>
+
+  <footer>Made with infinite love by tera wala 💘</footer>
+</div>
+
+<script>
+const fullMessage = "Happy Propose Day My LOVE\n\n" +
+  "Hey meri jaan… aaj Propose Day hai aur dil bohot kuch kehna chahta hai.....\n\n" +
+  "Pehli baar jab tujhe dekha tha, dil ne bola tha – bas yahi hai meri waali.... ❤️\n\n" +
+  "Har hasi teri, har baat teri, har pal tera saath – yahi meri sabse badi khushi hai...... 😊\n\n" +
+  "Tu meri best friend bhi, meri sabse pyaari girlfriend bhi, aur ab meri future wife bhi tu hi hai..... 🥹💍\n\n" +
+  "Tere bina zindagi adhoori si lagti hai… toh bas ab haan bol de.......\n\n" +
+  "I LOVE YOU 😍💕\n\n" +
+  "Forever & Always – sirf tu aur main… 💞";
+
+let charIndex = 0;
+const typingElement = document.getElementById('typingText');
+
+function type() {
+  if (charIndex < fullMessage.length) {
+    typingElement.textContent += fullMessage.charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 35);   // thoda slow rakha proposal ke liye
+  }
+}
+type();
+
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  const heartTypes = [
+    {emoji: '❤️', color: '#ff3366'},
+    {emoji: '💖', color: '#ff69b4'},
+    {emoji: '💕', color: '#ff1493'},
+    {emoji: '💗', color: '#ff85c0'},
+    {emoji: '💓', color: '#ff4081'},
+    {emoji: '💞', color: '#e91e63'},
+    {emoji: '💘', color: '#c2185b'},
+    {emoji: '💜', color: '#9c27b0'},
+  ];
+  const randomHeart = heartTypes[Math.floor(Math.random() * heartTypes.length)];
+  heart.innerHTML = randomHeart.emoji;
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.color = randomHeart.color;
+  heart.style.animationDuration = (7 + Math.random() * 9) + 's';
+  heart.style.fontSize = (1.8 + Math.random() * 3.5) + 'rem';
+  document.getElementById('hearts').appendChild(heart);
+  setTimeout(() => heart.remove(), 14000);
+}
+setInterval(createHeart, 220);
+for (let i = 0; i < 10; i++) setTimeout(createHeart, i * 120);
+</script>
+
+</body>
+</html>
