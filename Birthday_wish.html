@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Papa! My Hero ❤️</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      /* overflow: hidden;  ← HATA DIYAA */
+      position: relative;
+      min-height: 100vh;  /* abhi bhi full screen feel rahe */
+    }
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hearts {
+      position: fixed;     /* fixed kiya taaki scroll karne pe bhi move na karein */
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 5;
+    }
+    .heart {
+      position: absolute;
+      bottom: -80px;
+      font-size: 2.5rem;
+      animation: floatHeart 8s linear infinite;
+      opacity: 0;
+    }
+    @keyframes floatHeart {
+      0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+      5%   { opacity: 1; }
+      100% { transform: translateY(-140vh) rotate(1440deg); opacity: 0; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      /* height: 100vh;  ← HATA DIYAA */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 15px 80px;  /* neeche thoda space extra */
+    }
+
+    /* Baaki styles same rakh sakte ho (h1, typing, photos, wish, footer) */
+    h1 { font-size: clamp(3.5rem, 10vw, 7rem); margin: 20px 0 15px; text-shadow: 0 0 30px #ff3366, 0 0 60px #ff3366; animation: pulse 3s infinite alternate; }
+    @keyframes pulse { from { transform: scale(1); } to { transform: scale(1.04); } }
+
+    .typing { font-size: clamp(1.6rem, 5vw, 2.8rem); margin: 20px 0 40px; font-weight: bold; letter-spacing: 1px; color: #fffef0; text-shadow: 0 0 15px rgba(255,255,255,0.7); max-width: 90%; line-height: 1.5; white-space: pre-wrap; }
+
+    .photos { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(15px, 4vw, 30px); max-width: 100%; margin: 20px 0; padding: 0 10px; }
+
+    .photo { width: clamp(160px, 42vw, 260px); height: clamp(160px, 42vw, 260px); border-radius: 50%; overflow: hidden; border: 7px solid rgba(255,255,255,0.5); box-shadow: 0 8px 35px rgba(0,0,0,0.45); transition: all 0.45s ease; transform: scale(0.92); }
+
+    .photo:hover { transform: scale(1.12) rotate(4deg); border-color: #ff3366; box-shadow: 0 15px 55px rgba(255,51,102,0.55); }
+
+    .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .wish { font-size: clamp(2.2rem, 6.5vw, 4rem); margin-top: 30px; line-height: 1.5; animation: glow 4s infinite alternate; max-width: 90%; font-weight: bold; }
+    @keyframes glow { from { text-shadow: 0 0 15px #fff, 0 0 30px #ff69b4; } to { text-shadow: 0 0 35px #fff, 0 0 70px #ff69b4, 0 0 100px #ff1493; } }
+
+    footer { margin-top: 60px; font-size: 1.8rem; font-weight: bold; opacity: 0.95; text-shadow: 0 0 10px rgba(255,255,255,0.8); }
+  </style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+  <h1>Happy Birthday Papa! 🎂❤️</h1>
+  
+  <div class="typing" id="typingText"></div>
+  
+  <div class="photos">
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-02 at 1.19.24 PM.jpeg" alt="Memory 1"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-02 at 1.19.23 PM.jpeg" alt="Memory 2"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-02 at 1.19.24 PM (1).jpeg" alt="Memory 4"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-02 at 4.03.38 PM.jpeg" alt="Memory 1"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-02 at 4.03.37 PM.jpeg" alt="Memory 1"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-02 at 4.00.13 PM.jpeg" alt="Memory 1"></div>
+    <div class="photo"><img src="c:\Users\RAUNIT\Downloads\WhatsApp Image 2026-02-02 at 3.59.35 PM.jpeg" alt="Memory 1"></div>
+  </div>
+
+  <div class="wish">
+    You are the best papa in this world ❤️<br>
+    who has sacrificed everything for our family 🥹<br>
+    like your precious time, money, and so much more 💪💸<br>
+    for making our career and future bright 🌟✨<br><br>
+    Always remember your son is always with you... forever ❤️🫂
+  </div>
+
+  <footer>Made with Lots of Love by your lovely son 🫶</footer>
+</div>
+
+<script>
+// Typing aur hearts ka code same rakh sakte ho (jo pehle tha, woh chalega)
+const fullMessage = "Papa, aap meri zindagi ke sabse bade hero ho, har mushkil mein aapne mera saath diya aur mujhe himmat sikhayi ❤️\n\n" +
+  "Har khushi, har muskaan, har safalta aapki wajah se hai, aapki mehnat aur pyaar ne mujhe aaj yahan tak pahunchaya 😊🙏\n\n" +
+  "Aapka birthday sirf ek din nahi, har din celebrate karna chahiye kyunki aap har din mere liye itna kuch karte ho 🎂🥳\n\n" +
+  "Bachpan se lekar aaj tak aapki woh chuppi, woh gussa, woh pyaar bhari daant – sab yaad hai aur dil ko chhoo jati hai 🥹💕\n\n" +
+  "Aap hamesha strong rahe, hamesha khush rahe, aur mujhe mauka mile aapki thodi si bhi khidmat karne ka 🙌❤️\n\n" +
+  "Thank you Papa for being my everything, for teaching me how to live with dignity aur pyaar se 😍\n\n" +
+  "Happy Birthday mere pyare papa! 🎉🥰✨";
+let charIndex = 0;
+const typingElement = document.getElementById('typingText');
+
+function type() {
+  if (charIndex < fullMessage.length) {
+    typingElement.textContent += fullMessage.charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 20);
+  }
+}
+type();
+
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  const heartTypes = [
+    {emoji: '❤️', color: '#ff3366'},
+    {emoji: '💖', color: '#ff69b4'},
+    {emoji: '💕', color: '#ff1493'},
+    {emoji: '💗', color: '#ff85c0'},
+    {emoji: '💓', color: '#ff4081'},
+    {emoji: '💞', color: '#e91e63'},
+    {emoji: '💘', color: '#c2185b'},
+    {emoji: '💜', color: '#9c27b0'},
+    {emoji: '💙', color: '#2196f3'},
+    {emoji: '💚', color: '#4caf50'},
+    {emoji: '💛', color: '#ffeb3b'},
+    {emoji: '🧡', color: '#ff9800'}
+  ];
+  const randomHeart = heartTypes[Math.floor(Math.random() * heartTypes.length)];
+  heart.innerHTML = randomHeart.emoji;
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.color = randomHeart.color;
+  heart.style.animationDuration = (6 + Math.random() * 8) + 's';
+  heart.style.fontSize = (1.5 + Math.random() * 3) + 'rem';
+  document.getElementById('hearts').appendChild(heart);
+  setTimeout(() => heart.remove(), 12000);
+}
+setInterval(createHeart, 180);
+for (let i = 0; i < 8; i++) setTimeout(createHeart, i * 100);
+</script>
+
+</body>
+</html>
